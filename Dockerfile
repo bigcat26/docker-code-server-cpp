@@ -21,6 +21,12 @@ RUN \
     nano \
     net-tools \
     netcat \
+    cmake \
+    gcc \
+    g++ \
+    tig \
+    clangd \
+    ninja-build \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
