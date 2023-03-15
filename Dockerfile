@@ -24,6 +24,7 @@ RUN \
     cmake \
     gcc \
     g++ \
+    gdb \
     tig \
     clangd \
     ninja-build \
