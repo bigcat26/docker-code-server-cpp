@@ -27,6 +27,8 @@ RUN \
     tig \
     clangd \
     ninja-build \
+    python3 \
+    python3-pip \
     sudo && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
@@ -39,6 +41,8 @@ RUN \
     "https://github.com/coder/code-server/releases/download/v${CODE_RELEASE}/code-server-${CODE_RELEASE}-linux-amd64.tar.gz" && \
   tar xf /tmp/code-server.tar.gz -C \
     /app/code-server --strip-components=1 && \
+  echo "**** install conan ****" && \
+  python3 -m pip install conan==1.59.0 && \
   echo "**** clean up ****" && \
   apt-get clean && \
   rm -rf \
