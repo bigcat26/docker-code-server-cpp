@@ -28,6 +28,7 @@ RUN \
     tig \
     clangd \
     ninja-build \
+    silversearcher-ag \
     python3 \
     python3-pip \
     sudo && \
